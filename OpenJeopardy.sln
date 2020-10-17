@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardyApi", "OpenJeopardyApi\OpenJeopardyApi.csproj", "{C91D8918-0AC1-42D3-936F-23CE6D8D5BCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardy.Core", "OpenJeopardy.Core\OpenJeopardy.Core.csproj", "{B6C2AE9B-172D-4EC8-AF4B-5C15C002F271}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardy.Test", "OpenJeopardy.Test\OpenJeopardy.Test.csproj", "{8C737E95-8B33-44E4-A001-BF93275A066B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C91D8918-0AC1-42D3-936F-23CE6D8D5BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C91D8918-0AC1-42D3-936F-23CE6D8D5BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C91D8918-0AC1-42D3-936F-23CE6D8D5BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C2AE9B-172D-4EC8-AF4B-5C15C002F271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C2AE9B-172D-4EC8-AF4B-5C15C002F271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C2AE9B-172D-4EC8-AF4B-5C15C002F271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C2AE9B-172D-4EC8-AF4B-5C15C002F271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C737E95-8B33-44E4-A001-BF93275A066B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C737E95-8B33-44E4-A001-BF93275A066B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C737E95-8B33-44E4-A001-BF93275A066B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C737E95-8B33-44E4-A001-BF93275A066B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
