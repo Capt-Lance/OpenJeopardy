@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardy.Core", "OpenJe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardy.Test", "OpenJeopardy.Test\OpenJeopardy.Test.csproj", "{8C737E95-8B33-44E4-A001-BF93275A066B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardy.Infrastructure", "OpenJeopardy.Infrastructure\OpenJeopardy.Infrastructure.csproj", "{36877243-D73B-462E-B69E-D0BEBC77B107}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8C737E95-8B33-44E4-A001-BF93275A066B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C737E95-8B33-44E4-A001-BF93275A066B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C737E95-8B33-44E4-A001-BF93275A066B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36877243-D73B-462E-B69E-D0BEBC77B107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36877243-D73B-462E-B69E-D0BEBC77B107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36877243-D73B-462E-B69E-D0BEBC77B107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36877243-D73B-462E-B69E-D0BEBC77B107}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

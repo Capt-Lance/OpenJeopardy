@@ -1,14 +1,38 @@
 ﻿using OpenJeopardy.Core.Users;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace OpenJeopardy.Core.Boards
 {
     public class Board
     {
-        public IEnumerable<Topic> Topics { get; private set; }
-        public string Name { get; private set; }
-        public int Id { get; private set; }
+        private readonly List<Topic> topics;
+        private Board(string name, User user)
+        {
+            Name = name;
+            Owner = user;
+            topics = new List<Topic>();
+        }
 
-        public User User { get; private set; }
+        public Board(string name, IEnumerable<Topic> topics)
+        {
+            Name = name;
+            this.topics = topics.ToList();
+        }
+
+        public int Id { get; private set; }
+        public string Name { get; private set; }
+        public IEnumerable<Topic> Topics { 
+            get 
+            {
+                return topics.AsReadOnly();
+            }
+        }
+        public User Owner { get; private set; }
+
+        public static Board CreateNew(string name, User user)
+        {
+            return new Board(name, user);
+        }
     }
 }
