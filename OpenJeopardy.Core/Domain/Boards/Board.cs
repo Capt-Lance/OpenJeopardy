@@ -6,7 +6,7 @@ namespace OpenJeopardy.Core.Boards
 {
     public class Board
     {
-        private readonly List<Topic> topics;
+        private List<Topic> topics;
         private Board(string name, User user)
         {
             Name = name;
@@ -33,6 +33,16 @@ namespace OpenJeopardy.Core.Boards
         public static Board CreateNew(string name, User user)
         {
             return new Board(name, user);
+        }
+
+        public void Update(Board board)
+        {
+            topics = new List<Topic>();
+            foreach(Topic newTopic in board.topics)
+            {
+                topics.Add(newTopic);
+            }
+            Name = board.Name;
         }
     }
 }

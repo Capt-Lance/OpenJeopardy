@@ -29,7 +29,7 @@ namespace OpenJeopardy.Core.Application.BoardDesign
         {
             Board board = await boardRepository.FindByIdAsync(boardDto.Id);
             Board newBoard = boardDto.ToBoard();
-            //board.Update(newBoard);
+            board.Update(newBoard);
             await boardRepository.SaveAsync();
             return board;
 
