@@ -36,11 +36,10 @@ namespace OpenJeopardy.Test.Core.Application.BoardDesign
         public class UpdateBoardAsyncMethod
         {
             [Fact]
-            // Need to implement a IBoardRepository Fake to have pre-existing Board to pull
             public async Task TopicsGetAddedToBoardWithAnswers()
             {
                 Board board;
-                int id = 1;
+                Guid id = new Guid("5cb3d6d1-036f-476e-b904-d844b86fd69f");
                 List<TopicDto> topicDtos = new List<TopicDto>();
                 var topicDTO1 = new TopicDto()
                 {

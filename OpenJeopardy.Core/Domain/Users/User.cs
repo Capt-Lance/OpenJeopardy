@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace OpenJeopardy.Core.Users
 {
@@ -11,7 +9,14 @@ namespace OpenJeopardy.Core.Users
             Username = username;
             Password = password;
         }
-        public string Username { get; private set; }
+
+        private User()
+        {
+        }
+
+        public Guid Id { get; private set; }
+
         public string Password { get; private set; }
+        public string Username { get; private set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using OpenJeopardy.Core.Boards;
+using System;
 using System.Threading.Tasks;
 
 namespace OpenJeopardy.Core.Domain.Boards
@@ -7,7 +8,7 @@ namespace OpenJeopardy.Core.Domain.Boards
     {
         Task AddBoardAsync(Board board);
 
-        Task<Board> FindByIdAsync(int id);
+        Task<Board> FindByIdAsync(Guid id);
 
         Task SaveAsync();
 

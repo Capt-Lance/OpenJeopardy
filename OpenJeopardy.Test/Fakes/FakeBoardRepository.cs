@@ -10,13 +10,13 @@ namespace OpenJeopardy.Test.Fakes
 {
     public class FakeBoardRepository : IBoardRepository
     {
-        private Dictionary<int, Board> idBoardPairs;
+        private Dictionary<Guid, Board> idBoardPairs;
 
         public FakeBoardRepository()
         {
-            idBoardPairs = new Dictionary<int, Board>()
+            idBoardPairs = new Dictionary<Guid, Board>()
             {
-                {1, Board.CreateNew("first", new User("user1", "passwd")) }
+                {new Guid("5cb3d6d1-036f-476e-b904-d844b86fd69f"), Board.CreateNew("first", new User("user1", "passwd")) }
             };
         }
         public Task AddBoardAsync(Board board)
@@ -25,7 +25,7 @@ namespace OpenJeopardy.Test.Fakes
             return Task.CompletedTask;
         }
 
-        public Task<Board> FindByIdAsync(int id)
+        public Task<Board> FindByIdAsync(Guid id)
         {
             return Task.FromResult(idBoardPairs[id]);
         }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace OpenJeopardy.Core.Boards
 {
@@ -11,7 +9,14 @@ namespace OpenJeopardy.Core.Boards
             Prompt = prompt;
             CorrectResponse = correctResponse;
         }
-        public string Prompt { get; private set; }
+
+        private Answer()
+        {
+        }
+
+        public Guid Id { get; private set; }
+
         public string CorrectResponse { get; private set; }
+        public string Prompt { get; private set; }
     }
 }
