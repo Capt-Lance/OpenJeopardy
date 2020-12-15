@@ -10,7 +10,7 @@ namespace OpenJeopardy.Core.Application.Dtos.Boards
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        //public UserDto Owner { get; set; }
+        public UserDto Owner { get; set; }
         public IEnumerable<TopicDto> Topics { get; set; }
 
         public Board ToBoard()

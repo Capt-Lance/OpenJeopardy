@@ -11,6 +11,6 @@ namespace OpenJeopardy.Core.Application.BoardDesign
     public interface IBoardEditingService
     {
         Task<Board> CreateNewBoardAsync(string name, User user);
-        Task<Board> SaveBoardAsync(BoardDto boardDto);
+        Task<Board> SaveBoardAsync(Board board);
     }
 }

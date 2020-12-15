@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardyApi", "OpenJeopardyApi\OpenJeopardyApi.csproj", "{C91D8918-0AC1-42D3-936F-23CE6D8D5BCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenJeopardyApi", "OpenJeopardyApi\OpenJeopardyApi.csproj", "{C91D8918-0AC1-42D3-936F-23CE6D8D5BCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardy.Core", "OpenJeopardy.Core\OpenJeopardy.Core.csproj", "{B6C2AE9B-172D-4EC8-AF4B-5C15C002F271}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenJeopardy.Core", "OpenJeopardy.Core\OpenJeopardy.Core.csproj", "{B6C2AE9B-172D-4EC8-AF4B-5C15C002F271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardy.Test", "OpenJeopardy.Test\OpenJeopardy.Test.csproj", "{8C737E95-8B33-44E4-A001-BF93275A066B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenJeopardy.Test", "OpenJeopardy.Test\OpenJeopardy.Test.csproj", "{8C737E95-8B33-44E4-A001-BF93275A066B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJeopardy.Infrastructure", "OpenJeopardy.Infrastructure\OpenJeopardy.Infrastructure.csproj", "{36877243-D73B-462E-B69E-D0BEBC77B107}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenJeopardy.Infrastructure", "OpenJeopardy.Infrastructure\OpenJeopardy.Infrastructure.csproj", "{36877243-D73B-462E-B69E-D0BEBC77B107}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

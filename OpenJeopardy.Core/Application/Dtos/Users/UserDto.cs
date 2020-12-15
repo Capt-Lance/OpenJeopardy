@@ -7,5 +7,7 @@ namespace OpenJeopardy.Core.Application.Dtos.Users
     public class UserDto
     {
         public string Username { get; set; }
+
+        public Guid Id { get; set; }
     }
 }

@@ -1,5 +1,4 @@
-﻿using OpenJeopardy.Core.Application.Dtos.Boards;
-using OpenJeopardy.Core.Boards;
+﻿using OpenJeopardy.Core.Boards;
 using OpenJeopardy.Core.Domain.Boards;
 using OpenJeopardy.Core.Users;
 using System;
@@ -25,10 +24,10 @@ namespace OpenJeopardy.Core.Application.BoardDesign
             return board;
         }
 
-        public async Task<Board> SaveBoardAsync(BoardDto boardDto)
+        public async Task<Board> SaveBoardAsync(Board newBoard)
         {
-            Board board = await boardRepository.FindByIdAsync(boardDto.Id);
-            Board newBoard = boardDto.ToBoard();
+            Board board = await boardRepository.FindByIdAsync(newBoard.Id);
+            //Board newBoard = boardDto.ToBoard();
             board.Update(newBoard);
             await boardRepository.SaveAsync();
             return board;

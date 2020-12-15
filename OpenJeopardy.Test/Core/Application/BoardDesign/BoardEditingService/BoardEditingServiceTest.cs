@@ -40,27 +40,19 @@ namespace OpenJeopardy.Test.Core.Application.BoardDesign
             {
                 Board board;
                 Guid id = new Guid("5cb3d6d1-036f-476e-b904-d844b86fd69f");
-                List<TopicDto> topicDtos = new List<TopicDto>();
-                var topicDTO1 = new TopicDto()
-                {
-                    Answers = new List<AnswerDto>()
-                };
-                var topicDTO2 = new TopicDto()
-                {
-                    Answers = new List<AnswerDto>()
-                };
-                topicDtos.Add(topicDTO1);
-                topicDtos.Add(topicDTO2);
-                BoardDto boardDTO = new BoardDto()
-                {
-                    Id = id,
-                    Topics = topicDtos
+                List<Topic> topics = new List<Topic>();
+                var topic1 = new Topic("topic1", new List<Answer>());
+                var topic2 = new Topic("topic2", new List<Answer>());
 
-                };
+                topics.Add(topic1);
+                topics.Add(topic2);
+                board = new Board("test", topics);
+
                 var boardRepository = new FakeBoardRepository();
+                await boardRepository.AddBoardAsync(board);
                 var boardEditingService = new BoardEditingService(boardRepository);
 
-                var updatedBoard = await boardEditingService.SaveBoardAsync(boardDTO);
+                var updatedBoard = await boardEditingService.SaveBoardAsync(board);
 
                 Assert.True(updatedBoard.Topics.Count() == 2, "Topics were not updated correctly");
             }

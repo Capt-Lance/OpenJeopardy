@@ -44,11 +44,7 @@ namespace OpenJeopardy.Core.Boards
 
         public void Update(Board board)
         {
-            topics = new List<Topic>();
-            foreach (Topic newTopic in board.topics)
-            {
-                topics.Add(newTopic);
-            }
+            topics = board.Topics.ToList();
             Name = board.Name;
         }
     }
