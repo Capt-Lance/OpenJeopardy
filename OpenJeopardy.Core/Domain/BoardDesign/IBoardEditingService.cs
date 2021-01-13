@@ -12,5 +12,7 @@ namespace OpenJeopardy.Core.Application.BoardDesign
     {
         Task<Board> CreateNewBoardAsync(string name, User user);
         Task<Board> SaveBoardAsync(Board board);
+
+        Task DeleteBoardAsync(Guid id);
     }
 }

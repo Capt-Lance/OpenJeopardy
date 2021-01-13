@@ -19,7 +19,7 @@ namespace OpenJeopardy.Core.Application.BoardDesign
         public async Task<Board> CreateNewBoardAsync(string name, User user)
         {
             Board board = Board.CreateNew(name, user);
-            await boardRepository.AddBoardAsync(board);
+            await boardRepository.AddAsync(board);
             await boardRepository.SaveAsync();
             return board;
         }
@@ -32,6 +32,13 @@ namespace OpenJeopardy.Core.Application.BoardDesign
             await boardRepository.SaveAsync();
             return board;
 
+        }
+
+        public async Task DeleteBoardAsync(Guid id)
+        {
+            Board board = await boardRepository.FindByIdAsync(id);
+            await boardRepository.DeleteAsync(board);
+            await boardRepository.SaveAsync();
         }
     }
 }

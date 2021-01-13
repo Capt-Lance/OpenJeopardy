@@ -36,5 +36,20 @@ namespace OpenJeopardyApi.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        public async Task<IActionResult> DeleteBoard(Guid boardGuidToDelete)
+        {
+            try
+            {
+                DeleteBoardCommand deleteBoardCommand = new DeleteBoardCommand(boardGuidToDelete);
+                await mediator.Send(deleteBoardCommand);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            
+        }
     }
 }

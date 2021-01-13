@@ -6,12 +6,14 @@ namespace OpenJeopardy.Core.Domain.Boards
 {
     public interface IBoardRepository
     {
-        Task AddBoardAsync(Board board);
+        Task AddAsync(Board board);
 
         Task<Board> FindByIdAsync(Guid id);
 
         Task SaveAsync();
 
-        Task UpdateBoardAsync(Board board);
+        Task UpdateAsync(Board board);
+
+        Task DeleteAsync(Board board);
     }
 }

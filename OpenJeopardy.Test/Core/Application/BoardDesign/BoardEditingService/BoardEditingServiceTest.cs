@@ -49,7 +49,7 @@ namespace OpenJeopardy.Test.Core.Application.BoardDesign
                 board = new Board("test", topics);
 
                 var boardRepository = new FakeBoardRepository();
-                await boardRepository.AddBoardAsync(board);
+                await boardRepository.AddAsync(board);
                 var boardEditingService = new BoardEditingService(boardRepository);
 
                 var updatedBoard = await boardEditingService.SaveBoardAsync(board);
