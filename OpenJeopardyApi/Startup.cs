@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 using OpenJeopardy.Core.Application.BoardDesign;
 using OpenJeopardy.Core.Application.BoardDesign.Commands;
 using OpenJeopardy.Core.Domain.Boards;
+using OpenJeopardy.Core.Domain.Users;
 using OpenJeopardy.Infrastructure;
 using OpenJeopardy.Infrastructure.Repositories;
 using Serilog;
@@ -34,7 +35,8 @@ namespace OpenJeopardyApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<OpenJeopardyContext>(options => options.UseInMemoryDatabase());
+            services.AddDbContext<OpenJeopardyContext>(options => options.UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()));
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IBoardRepository, BoardRepository>();
             services.AddScoped<IBoardEditingService, BoardEditingService>();
             services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(CreateNewBoardCommand).Assembly);
@@ -60,10 +62,7 @@ namespace OpenJeopardyApi
 
         public void ConfigureLogging()
         {
-            Log.Logger = new LoggerConfiguration()
-                .Enrich.FromLogContext()
-                .WriteTo.Trace()
-                .CreateLogger();
+
         }
     }
 }
