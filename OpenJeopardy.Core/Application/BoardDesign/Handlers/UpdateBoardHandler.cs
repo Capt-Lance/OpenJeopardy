@@ -19,6 +19,7 @@ namespace OpenJeopardy.Core.Domain.BoardDesign.Handlers
             this.boardEditingService = boardEditingService;
             this.logger = logger;
         }
+        
         public async Task<BoardDto> Handle(UpdateBoardCommand request, CancellationToken cancellationToken)
         {
             await boardEditingService.UpdateBoardAsync(request.BoardDto.ToBoard());
