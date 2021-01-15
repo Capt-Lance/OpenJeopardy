@@ -1,4 +1,4 @@
-﻿using OpenJeopardy.Core.Application.Dtos.Boards;
+﻿using OpenJeopardy.Core.Domain.Dtos.Boards;
 using System;
 using System.Collections.Generic;
 using System.Linq;

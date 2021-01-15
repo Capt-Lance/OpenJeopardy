@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Moq;
-using OpenJeopardy.Core.Application.BoardDesign;
+using OpenJeopardy.Core.Domain.BoardDesign;
 using Xunit;
 using OpenJeopardy.Core.Boards;
-using OpenJeopardy.Core.Application.Dtos.Boards;
+using OpenJeopardy.Core.Domain.Dtos.Boards;
 using System.Linq;
 using OpenJeopardy.Test.Fakes;
 

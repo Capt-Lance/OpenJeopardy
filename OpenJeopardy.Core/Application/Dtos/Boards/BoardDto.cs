@@ -1,10 +1,10 @@
-﻿using OpenJeopardy.Core.Application.Dtos.Users;
+﻿using OpenJeopardy.Core.Domain.Dtos.Users;
 using OpenJeopardy.Core.Boards;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenJeopardy.Core.Application.Dtos.Boards
+namespace OpenJeopardy.Core.Domain.Dtos.Boards
 {
     public class BoardDto
     {

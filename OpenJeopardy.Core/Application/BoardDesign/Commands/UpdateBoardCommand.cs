@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using OpenJeopardy.Core.Application.Dtos.Boards;
+using OpenJeopardy.Core.Domain.Dtos.Boards;
 using OpenJeopardy.Core.Boards;
 
-namespace OpenJeopardy.Core.Application.BoardDesign.Commands
+namespace OpenJeopardy.Core.Domain.BoardDesign.Commands
 {
     public class UpdateBoardCommand : IRequest<BoardDto>
     {

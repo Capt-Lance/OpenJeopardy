@@ -7,8 +7,8 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OpenJeopardy.Core.Application.BoardDesign.Commands;
-using OpenJeopardy.Core.Application.Dtos.Boards;
+using OpenJeopardy.Core.Domain.BoardDesign.Commands;
+using OpenJeopardy.Core.Domain.Dtos.Boards;
 
 namespace OpenJeopardyApi.Controllers
 {

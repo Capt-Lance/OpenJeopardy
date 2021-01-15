@@ -1,12 +1,12 @@
 ﻿using MediatR;
-using OpenJeopardy.Core.Application.Dtos.Boards;
-using OpenJeopardy.Core.Application.Dtos.Users;
+using OpenJeopardy.Core.Domain.Dtos.Boards;
+using OpenJeopardy.Core.Domain.Dtos.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenJeopardy.Core.Application.BoardDesign.Commands
+namespace OpenJeopardy.Core.Domain.BoardDesign.Commands
 {
     public class CreateNewBoardCommand : IRequest<BoardDto>
     {

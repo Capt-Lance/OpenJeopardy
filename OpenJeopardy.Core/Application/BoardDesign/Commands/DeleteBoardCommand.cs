@@ -1,10 +1,10 @@
 ﻿using System;
 using MediatR;
-using OpenJeopardy.Core.Application.Dtos.Boards;
-using OpenJeopardy.Core.Application.Dtos.Users;
+using OpenJeopardy.Core.Domain.Dtos.Boards;
+using OpenJeopardy.Core.Domain.Dtos.Users;
 using OpenJeopardy.Core.Users;
 
-namespace OpenJeopardy.Core.Application.BoardDesign.Commands
+namespace OpenJeopardy.Core.Domain.BoardDesign.Commands
 {
     //TODO:
     // FIGURE OUT WHERE DELETION SECURITY LOGIC GOES

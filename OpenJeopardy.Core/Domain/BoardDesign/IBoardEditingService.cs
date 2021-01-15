@@ -1,4 +1,4 @@
-﻿using OpenJeopardy.Core.Application.Dtos.Boards;
+﻿using OpenJeopardy.Core.Domain.Dtos.Boards;
 using OpenJeopardy.Core.Boards;
 using OpenJeopardy.Core.Users;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenJeopardy.Core.Application.BoardDesign
+namespace OpenJeopardy.Core.Domain.BoardDesign
 {
     public interface IBoardEditingService
     {

@@ -1,4 +1,4 @@
-﻿using OpenJeopardy.Core.Application.Dtos.Boards;
+﻿using OpenJeopardy.Core.Domain.Dtos.Boards;
 using Xunit;
 
 namespace OpenJeopardy.Test.Core.Application.DtoExtensions

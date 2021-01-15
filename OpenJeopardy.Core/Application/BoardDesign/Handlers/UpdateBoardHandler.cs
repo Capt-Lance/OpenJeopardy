@@ -2,19 +2,19 @@
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using OpenJeopardy.Core.Application.BoardDesign.Commands;
-using OpenJeopardy.Core.Application.Dtos.Boards;
-using OpenJeopardy.Core.Application.Extensions.Boards;
+using OpenJeopardy.Core.Domain.BoardDesign.Commands;
+using OpenJeopardy.Core.Domain.Dtos.Boards;
+using OpenJeopardy.Core.Domain.Extensions.Boards;
 using OpenJeopardy.Core.Boards;
 using OpenJeopardy.Core.Users;
 
-namespace OpenJeopardy.Core.Application.BoardDesign.Handlers
+namespace OpenJeopardy.Core.Domain.BoardDesign.Handlers
 {
     public class UpdateBoardHandler : IRequestHandler<UpdateBoardCommand, BoardDto>
     {
         private IBoardEditingService boardEditingService;
         private ILogger<UpdateBoardHandler> logger;
-        public UpdateBoardHandler(BoardEditingService boardEditingService, ILogger<UpdateBoardHandler> logger)
+        public UpdateBoardHandler(IBoardEditingService boardEditingService, ILogger<UpdateBoardHandler> logger)
         {
             this.boardEditingService = boardEditingService;
             this.logger = logger;

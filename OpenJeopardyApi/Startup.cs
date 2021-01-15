@@ -11,9 +11,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using OpenJeopardy.Core.Application.BoardDesign;
-using OpenJeopardy.Core.Application.BoardDesign.Commands;
+using OpenJeopardy.Core.Domain.BoardDesign;
+using OpenJeopardy.Core.Domain.BoardDesign.Handlers;
 using OpenJeopardy.Core.Domain.Boards;
 using OpenJeopardy.Core.Domain.Users;
 using OpenJeopardy.Infrastructure;
@@ -39,7 +38,7 @@ namespace OpenJeopardyApi
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IBoardRepository, BoardRepository>();
             services.AddScoped<IBoardEditingService, BoardEditingService>();
-            services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(CreateNewBoardCommand).Assembly);
+            services.AddMediatR(typeof(CreateNewBoardHandler).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
