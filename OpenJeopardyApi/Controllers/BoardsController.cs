@@ -51,5 +51,19 @@ namespace OpenJeopardyApi.Controllers
             }
             
         }
+
+        public async Task<IActionResult> UpdateBoard(BoardDto boardToUpdate)
+        {
+            try
+            {
+                UpdateBoardCommand updateBoardCommand = new UpdateBoardCommand(boardToUpdate);
+                BoardDto boardDto = await mediator.Send(updateBoardCommand);
+                return Ok(boardDto);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

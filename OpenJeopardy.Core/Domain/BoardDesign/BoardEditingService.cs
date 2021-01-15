@@ -40,5 +40,11 @@ namespace OpenJeopardy.Core.Application.BoardDesign
             await boardRepository.DeleteAsync(board);
             await boardRepository.SaveAsync();
         }
+
+        public async Task UpdateBoardAsync(Board board)
+        {
+            await boardRepository.UpdateAsync(board);
+            await boardRepository.SaveAsync();
+        }
     }
 }

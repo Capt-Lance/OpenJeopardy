@@ -22,6 +22,7 @@ namespace OpenJeopardy.Core.Application.BoardDesign.Handlers
         public async Task<Unit> Handle(DeleteBoardCommand request, CancellationToken cancellationToken)
         {
             await boardEditingService.DeleteBoardAsync(request.BoardId);
+            logger.LogInformation("Deleting board with Id of {0}", request.BoardId);
             return Unit.Value;
         }
     }
