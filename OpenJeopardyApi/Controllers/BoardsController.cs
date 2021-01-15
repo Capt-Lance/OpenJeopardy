@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -23,6 +24,11 @@ namespace OpenJeopardyApi.Controllers
             this.logger = logger;
         }
 
+        
+        //Name:
+        //User:
+        
+        [HttpPost]
         public async Task<IActionResult> CreateBoard(BoardDto boardDtoToCreate)
         {
             try
