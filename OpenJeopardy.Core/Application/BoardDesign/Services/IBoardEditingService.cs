@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenJeopardy.Core.Domain.BoardDesign
+namespace OpenJeopardy.Core.Application.Services.BoardDesign
 {
     public interface IBoardEditingService
     {

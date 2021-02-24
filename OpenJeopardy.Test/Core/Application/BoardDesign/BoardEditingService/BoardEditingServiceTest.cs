@@ -11,6 +11,7 @@ using OpenJeopardy.Core.Boards;
 using OpenJeopardy.Core.Domain.Dtos.Boards;
 using System.Linq;
 using OpenJeopardy.Test.Fakes;
+using OpenJeopardy.Core.Application.Services.BoardDesign;
 
 namespace OpenJeopardy.Test.Core.Application.BoardDesign
 {

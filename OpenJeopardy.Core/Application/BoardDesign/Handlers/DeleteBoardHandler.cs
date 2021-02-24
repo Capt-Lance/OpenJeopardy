@@ -3,9 +3,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using OpenJeopardy.Core.Application.Services.BoardDesign;
 using OpenJeopardy.Core.Domain.BoardDesign.Commands;
-using OpenJeopardy.Core.Domain.Dtos.Boards;
-using OpenJeopardy.Core.Domain.Users;
+
 
 namespace OpenJeopardy.Core.Domain.BoardDesign.Handlers
 {

@@ -6,11 +6,9 @@ using OpenJeopardy.Core.Domain.Extensions.Boards;
 using OpenJeopardy.Core.Boards;
 using OpenJeopardy.Core.Domain.Users;
 using OpenJeopardy.Core.Users;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using OpenJeopardy.Core.Application.Services.BoardDesign;
 
 namespace OpenJeopardy.Core.Domain.BoardDesign.Handlers
 {

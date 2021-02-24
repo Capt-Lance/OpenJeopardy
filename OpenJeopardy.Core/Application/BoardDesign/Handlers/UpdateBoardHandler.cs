@@ -7,6 +7,7 @@ using OpenJeopardy.Core.Domain.Dtos.Boards;
 using OpenJeopardy.Core.Domain.Extensions.Boards;
 using OpenJeopardy.Core.Boards;
 using OpenJeopardy.Core.Users;
+using OpenJeopardy.Core.Application.Services.BoardDesign;
 
 namespace OpenJeopardy.Core.Domain.BoardDesign.Handlers
 {

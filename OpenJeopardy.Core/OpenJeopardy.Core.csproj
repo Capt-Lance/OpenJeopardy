@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Application\Gameplay\" />
+    <Folder Include="Domain\BoardDesign\" />
   </ItemGroup>
 
   <ItemGroup>
