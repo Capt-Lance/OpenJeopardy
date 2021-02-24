@@ -1,11 +1,11 @@
-﻿using OpenJeopardy.Core.Application.Dtos.Boards;
+﻿using OpenJeopardy.Core.Domain.Dtos.Boards;
 using OpenJeopardy.Core.Boards;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenJeopardy.Core.Application.Extensions.Boards
+namespace OpenJeopardy.Core.Domain.Extensions.Boards
 {
     public static class BoardExtensions
     {

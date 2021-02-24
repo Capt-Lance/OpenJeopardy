@@ -22,7 +22,7 @@ namespace OpenJeopardy.Core.Boards
         {
             get
             {
-                return answers;
+                return answers.AsReadOnly();
             }
         }
 

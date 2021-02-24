@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenJeopardy.Core.Application.Dtos.Boards
+namespace OpenJeopardy.Core.Domain.Dtos.Boards
 {
     public class TopicDto
     {

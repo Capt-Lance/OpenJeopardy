@@ -1,18 +1,16 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
-using OpenJeopardy.Core.Application.BoardDesign.Commands;
-using OpenJeopardy.Core.Application.Dtos.Boards;
-using OpenJeopardy.Core.Application.Extensions.Boards;
+using OpenJeopardy.Core.Domain.BoardDesign.Commands;
+using OpenJeopardy.Core.Domain.Dtos.Boards;
+using OpenJeopardy.Core.Domain.Extensions.Boards;
 using OpenJeopardy.Core.Boards;
 using OpenJeopardy.Core.Domain.Users;
 using OpenJeopardy.Core.Users;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using OpenJeopardy.Core.Application.Services.BoardDesign;
 
-namespace OpenJeopardy.Core.Application.BoardDesign.Handlers
+namespace OpenJeopardy.Core.Domain.BoardDesign.Handlers
 {
     public class CreateNewBoardHandler : IRequestHandler<CreateNewBoardCommand, BoardDto>
     {

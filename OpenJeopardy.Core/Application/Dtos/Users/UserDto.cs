@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenJeopardy.Core.Application.Dtos.Users
+namespace OpenJeopardy.Core.Domain.Dtos.Users
 {
     public class UserDto
     {

@@ -19,7 +19,7 @@ namespace OpenJeopardy.Test.Fakes
                 {new Guid("5cb3d6d1-036f-476e-b904-d844b86fd69f"), Board.CreateNew("first", new User("user1", "passwd")) }
             };
         }
-        public Task AddBoardAsync(Board board)
+        public Task AddAsync(Board board)
         {
             idBoardPairs[board.Id] = board;
             return Task.CompletedTask;
@@ -35,10 +35,15 @@ namespace OpenJeopardy.Test.Fakes
             return Task.CompletedTask;
         }
 
-        public Task UpdateBoardAsync(Board board)
+        public Task UpdateAsync(Board board)
         {
             idBoardPairs[board.Id] = board;
             return Task.CompletedTask;
+        }
+
+        public Task DeleteAsync(Board board)
+        {
+            throw new NotImplementedException();
         }
     }
 }

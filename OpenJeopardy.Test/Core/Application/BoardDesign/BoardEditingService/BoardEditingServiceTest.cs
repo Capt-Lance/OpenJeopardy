@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Moq;
-using OpenJeopardy.Core.Application.BoardDesign;
+using OpenJeopardy.Core.Domain.BoardDesign;
 using Xunit;
 using OpenJeopardy.Core.Boards;
-using OpenJeopardy.Core.Application.Dtos.Boards;
+using OpenJeopardy.Core.Domain.Dtos.Boards;
 using System.Linq;
 using OpenJeopardy.Test.Fakes;
+using OpenJeopardy.Core.Application.Services.BoardDesign;
 
 namespace OpenJeopardy.Test.Core.Application.BoardDesign
 {
@@ -49,7 +50,7 @@ namespace OpenJeopardy.Test.Core.Application.BoardDesign
                 board = new Board("test", topics);
 
                 var boardRepository = new FakeBoardRepository();
-                await boardRepository.AddBoardAsync(board);
+                await boardRepository.AddAsync(board);
                 var boardEditingService = new BoardEditingService(boardRepository);
 
                 var updatedBoard = await boardEditingService.SaveBoardAsync(board);
