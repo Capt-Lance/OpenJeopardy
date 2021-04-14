@@ -24,9 +24,12 @@ namespace OpenJeopardyApi.Controllers
             this.logger = logger;
         }
 
-        
-        //Name:
-        //User:
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetBoard(int id)
+        {
+            throw new NotImplementedException("testing error messages");
+        }
         
         [HttpPost]
         public async Task<IActionResult> CreateBoard(BoardDto boardDtoToCreate)

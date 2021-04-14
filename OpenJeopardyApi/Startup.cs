@@ -6,13 +6,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using OpenJeopardy.Core.Application.Services.BoardDesign;
 using OpenJeopardy.Core.Domain.BoardDesign.Handlers;
 using OpenJeopardy.Core.Domain.Boards;
 using OpenJeopardy.Core.Domain.Users;
 using OpenJeopardy.Infrastructure;
 using OpenJeopardy.Infrastructure.Repositories;
-using Serilog;
+using OpenJeopardyApi.Errors;
 
 namespace OpenJeopardyApi
 {
@@ -37,13 +38,13 @@ namespace OpenJeopardyApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.ConfigureExceptionHandler(logger);
             app.UseRouting();
 
             app.UseAuthorization();
